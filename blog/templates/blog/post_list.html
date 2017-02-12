@@ -4,15 +4,22 @@
 	<title>Mi BLog</title>
 </head>
 <body>
+<h1><a href="/" Django Girls BLog</a></h1>
 <p>Hi there</p>
-<p><em>It work!</em></p>
+
+<p> </em></p>
 <br>
+
 <div>
-<p><strong>Happy coding- </strong></p>--->
-<a href="http://djangogirls.org">Django Girls</a></div>
-<div>
-<ul><li>primer elemento</li><li>Segundo elemento</li></ul>
+    <h1><a href="/">Django Girls Blog</a></h1>
 </div>
-<div style="background-color: rgb();"></div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
